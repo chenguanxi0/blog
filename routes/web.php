@@ -31,7 +31,6 @@ Route::group(['prefix'=>'posts'],function(){
 //删除文章
     Route::get('/delete','PostController@delete');
 
-    Route::get('/aaa','PostController@aaa');
 });
 
 
