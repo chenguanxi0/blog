@@ -30,6 +30,8 @@ Route::group(['prefix'=>'posts'],function(){
     Route::get('/{post}','PostController@show');//模型绑定
 //删除文章
     Route::get('/delete','PostController@delete');
+
+    Route::get('/aaa','PostController@aaa');
 });
 
 
