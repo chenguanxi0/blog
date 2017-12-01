@@ -1,5 +1,5 @@
 @include('common.header_html')
-<body>
+<body >
 
 @include('common.header')
 

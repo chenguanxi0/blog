@@ -27,6 +27,13 @@ a:hover{
 .right{
     float: right;
 }
+
+@media (max-width: 768px) {
+.article-img img{
+    display: none;
+}
+}
+
 .header-header{
     background-color: #8c3432;
     height: 375px;
@@ -69,7 +76,7 @@ height: 180px;}
     background: #fff;
     margin-bottom: 10px;
     overflow: hidden;
-    padding: 0 20px 20px;
+    padding: 10px 0px 20px;
 }
 .article-category a{
     background-color: #16a085;
@@ -171,4 +178,13 @@ height: 180px;}
 }
 #editor{
     background-color: #fff;
+}
+
+.article-img img{
+    float: left;
+    margin-right: 10px;
+}
+
+#wangeditor{
+    height:600px;display:none;
 }

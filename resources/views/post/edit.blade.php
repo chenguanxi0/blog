@@ -4,16 +4,33 @@
 
 @section('content')
 
-    <form action="">
+    <form action="/posts/{{$post->id}}" method="POST">
+        {{csrf_field()}}
+        <input type="hidden" name="_method" value="PUT">
         <label for="title">标题:</label>
-        <input type="text" name="title" id="title" class="form-control" value="我不管我就要测试">
+        <input type="text" name="title" id="title" class="form-control" value="{{$post->title}}">
         <label for="content">内容:</label>
-        <textarea class="form-control" name="" id="content" rows="10">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试
-        </textarea>
+        <textarea class="form-control we-container" name="content" id="wangeditor" style="" cols="5">{{$post->content}}</textarea>
+        <span>你还可以输入<b id="num" style="">8000</b>个字符</span>
         <br>
-        <button type="submit" class="btn btn-info">提交</button>
+        @if(count($errors)>0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach($errors->all() as $error)
+                        <li>{{$error}}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+        <button type="submit" class="btn btn-info right">提交</button>
     </form>
 
 @endsection()
 
 
+@section('foot-js')
+
+    {!! we_js() !!}
+    {!! we_config('wangeditor') !!}
+    @include('common.string')
+@endsection()

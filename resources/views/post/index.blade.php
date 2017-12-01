@@ -6,7 +6,8 @@
     <?php env('DB_HOST') ?>
     @foreach($posts as $post)
     <article>
-        <section class="mp-article">
+
+        <section class="mp-article col-md-12">
             <div class="article-category">
                 <a href="#">{{$post->category_name}}</a>
             </div>
@@ -15,7 +16,7 @@
             </h2>
             <hr>
             <div class="row article-container">
-                <a href="/posts/{{$post->id}}">{{str_limit($post->content,150,'...')}}</a>
+                <a href="/posts/{{$post->id}}">{!! str_limit($post->content,150,'...')!!}</a>
             </div>
             <hr>
             <div class="article-bottom">
@@ -27,6 +28,7 @@
                     <i class="fa fa-user"></i> {{$post->username}}
                     <i class="fa fa-eye"></i> {{$post->watch_count}}
                 </div>
+                <br class="clearBoth">
             </div>
         </section>
     </article>

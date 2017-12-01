@@ -29,8 +29,8 @@ Route::group(['prefix'=>'posts'],function(){
 //文章详情页
     Route::get('/{post}','PostController@show');//模型绑定
 //删除文章
-    Route::get('/delete','PostController@delete');
-
+    Route::get('/{post}/delete','PostController@delete');
+//上传图片
+//    Route::post('/images/upload','PostController@imagesUpload');
 });
-
 

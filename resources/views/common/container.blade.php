@@ -1,9 +1,11 @@
+<div class="bk">
+
 <div class="container" id="pc-container">
     <div class="row" id="mp-row">
-        <div class="col-md-8">
+        <div class="col-md-9">
             @yield('content')
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <aside id="mp-aside">
                 <aside class="mp-search">
                     <div class="input-group">
@@ -19,13 +21,13 @@
                 <aside class="mp-pill">
                     <ul class="nav nav-pills" id="mp-tab">
                         <li class="active">
-                            <a href="#latest" data-toggle="tab">最近发表</a>
+                            <a href="#latest" data-toggle="tab">最近</a>
                         </li>
                         <li >
-                            <a href="#hot" data-toggle="tab">最热文章</a>
+                            <a href="#hot" data-toggle="tab">最热</a>
                         </li>
                         <li >
-                            <a href="#commit" data-toggle="tab">最新评论</a>
+                            <a href="#commit" data-toggle="tab">最新</a>
                         </li>
                     </ul>
 
@@ -82,4 +84,6 @@
             </aside>
         </div>
     </div>
+</div>
+
 </div>

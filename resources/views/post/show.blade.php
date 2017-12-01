@@ -14,6 +14,8 @@
                 <li><i class="fa fa-eye"> {{$post->watch+1}}</i></li>
                 <li><i class="fa fa-thumbs-o-up"> {{$post->like+1}}</i></li>
                 <li><i class="fa fa-tag"> {{$category->name}}</i></li>
+                <li><a href="/posts/{{$post->id}}/delete"><i class="fa fa-trash-o fa-fw"></i></a> </li>
+                <li><a href="/posts/{{$post->id}}/edit"><i class="fa fa-pencil fa-fw"></i></a></li>
                 <div class="clearBoth"></div>
             </ul>
 
@@ -21,7 +23,7 @@
     <br class="clearBoth">
     <div class="detail-container">
         <article>
-            {{$post->content}}
+            {!! $post->content !!}
         </article>
         <div class="show-foot">
             <div class="last-edit">
