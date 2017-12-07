@@ -3,6 +3,7 @@
 @section('title','Yo')
 
 @section('content')
+    <div class="col-md-9">
     <?php env('DB_HOST') ?>
     @foreach($posts as $post)
     <article>
@@ -35,7 +36,8 @@
     @endforeach
 
     {{$posts->links()}}
-
+    </div>
+    @include('layout.right-box')
 @endsection()
 
 

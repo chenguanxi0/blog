@@ -3,7 +3,7 @@
 @section('title','Yo')
 
 @section('content')
-
+    <div class="col-md-9">
     <form action="/posts/{{$post->id}}" method="POST">
         {{csrf_field()}}
         <input type="hidden" name="_method" value="PUT">
@@ -13,18 +13,11 @@
         <textarea class="form-control we-container" name="content" id="wangeditor" style="" cols="5">{{$post->content}}</textarea>
         <span>你还可以输入<b id="num" style="">8000</b>个字符</span>
         <br>
-        @if(count($errors)>0)
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach($errors->all() as $error)
-                        <li>{{$error}}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+        @include('layout.errors')
         <button type="submit" class="btn btn-info right">提交</button>
     </form>
-
+    </div>
+    @include('layout.right-box')
 @endsection()
 
 

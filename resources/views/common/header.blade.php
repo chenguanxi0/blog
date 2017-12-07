@@ -1,3 +1,23 @@
+<nav class="top-top">
+    <div class="container">
+        <ul class="right" >
+        <li class="dropdown fitst-li">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                跟我回潜江 <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="/user/setting"><i class="fa fa-user-o"></i> 个人中心</a></li>
+                <li><a href="/logout"><i class="fa fa-sign-out"></i> 退出</a></li>
+
+            </ul>
+
+        </li>
+           <li class="fitst-li">
+               <img src="images/james.jpg" alt="" width="60" height="60">
+           </li>
+        </ul>
+    </div>
+</nav>
 <header class="header-header">
 
     <div class="header_middle">

@@ -10,6 +10,8 @@
 </footer>
 <div id="editbox">
     <a href="/posts/create"><img src="/images/edit.png" alt="" width="60" height="60"></a>
+    <a href="/login"><img src="/images/login.png" alt="" width="60" height="60"></a>
+
 </div>
 
 @yield('foot-js')

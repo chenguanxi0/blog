@@ -3,7 +3,7 @@
 @section('title','Yo')
 
 @section('content')
-
+    <div class="col-md-9">
 <div class="article-detail">
     <header class="detail-header">
         <h2>{{$post->title}}</h2>
@@ -74,7 +74,8 @@
         </div>
     </div>
 </div>
-
+    </div>
+    @include('layout.right-box')
 @endsection()
 
 
